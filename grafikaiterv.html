@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bogitalaportfolio</title>
+	<meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<script type="text/javascript">
+      function fejlec_lenyito() {
+        var element = document.getElementById("lenyilo_menu");
+        element.classList.toggle("latszodik");
+      }
+    </script>
+
+<header>
+    
+   <div class="header_fent">
+     <a href="index.html" class="header_menu0 header_menu"><img src="kepek/home.png" alt="home_gomb"></a>
+        <a href="bemutatkozas.html" class="header_menu1 header_menu" ><span>Bemutatkozás</span></a>
+        <a href="munka.html" class="header_menu2 header_menu" ><span>Munkatapasztalat</span></a>
+        <a href="tudjmegtobbet.html" class="header_menu3 header_menu" ><span>Még több Rólam</span></a>
+         <div class="fejlec_down_gomb" onclick="fejlec_lenyito()"><img src="kepek/arrow.png" alt="down_arrow_picture"></div>
+        <div id="lenyilo_menu" >
+          <a href="grafikaiterv.html" class="lenyilo_almenu"><span>Grafikai terv</span></a>
+          
+        </div>  
+      </div>
+
+  </header>
+
+	 <main>
+
+    <div class="cim">EREDETI ELRENDEZÉSI KONCEPCIÓ RAJZA</div><br>
+    <div class="vazlat"><img src="kepek/Info terv.jpeg" alt="koncepcio_vazlat"></div>
+    <div class="cim">GRAFIKAI TERV</div>
+    <div class="vazlat"><img src="kepek/grafika.jpg" alt="grafikai_terv"></div>
+    <div class="cim">FELMERÜLŐ NEHÉZSÉGEK ÉS VÁLTOZÁSOK LEÍRÁSA</div>
+    <div class="nehezsegek">
+      <p>A portfolióm elkészítése során célom volt, hogy minél több tanult szerkezetet megjelenítsek. A tervezett portfolióm 5 oldallal rendelkezik. Az oldalak elrendezésében vannak közös részek, melyek grid rácsrendszerrel vannak elrendezve. A grid areak a header-fejléc, a main-főrész, és a footer-lábléc.</p>
+      <p>A headerben helyezkedik el a navigációs sáv, amely irányít a Bemutatkozáshoz, Munkatapasztalathoz, Még több Rólam és a lenyíló füles Grafikai terv oldalhoz, illetve az első icon visszavisz a nyitó oldalra. A headerben lévő bekezdés flexxel került elrendezésre. Eredetileg paddinggel, marginnal tagoltam a füleket, majd megváltoztattam, úgy, hogy automatikus egyenlő távolságra vannak egymástól a külön oldalra vezető fülek, az adott hely méretétől függően. Konzultáció során felhívták a figyelmemet, a responsive viselkedés hiányára, ezért a minimum szélességget kivettem és helyette flex-wrap:wrap elrendezést használtam, így 600px alatt is alkalmazkodik az oldal a képernyőhöz. A grafikai tervre vezető fül lenyílófül, amely javascripttel aktiválható.</p>
+      <p>A footerben az elérhetőségeimre vezető iconok hivatkozással vannak ellátva. Ezen iconok inline-blokkal kerültek elrendezésre, ahol nehézséget okozott, hogy hover megjelenésnél a háttérszínek megfelelő méretben jelenjennek meg az iconok mögött. A ne túl kicsi, ne túllogó színezést border-radiussal és az iconok azonos méretre állításával küszöböltem ki. Mind a header és footer rész is rendelkezik paddinggel és marginnal és egyéb formázással (pl.: szín/háttérszín, méretváltozás, betűstílus változás stb.), az esztétikusabb megjelenés miatt.</p>
+      <p>Minden oldalon a main rész különbözik. A nulladik „index.html”-en Photoshoppal szerkesztett borítókép található. A Bemutatkozás oldalon a details/summary technika került alkalmazásra eredetileg, azonban a gyakorlatvezető tanácsát megfogadva a bemutatkozó szöveget állandóan láthatóvá tettem. Ezt a változtatást a details open megoldással tudtam a legegyszerűbben kivitelezni, úgyanis nem szerettem volna teljesen új szerkezetet felépíteni, és úgy vélem a felhasználó számára pedig nem zavaró ez a megoldás. A munkatapasztalatok grid rácsrendszerrel került rendezésre. A Még több Rólam oldalon eredetileg javascripttel onclick metódust terveztem használni, azonban a var x=document.getElementsClassNames() metódust nem sikerült alkalmazni, melyre nem derült fény, hogy miért nem. Úgy döntöttem, helyette az átlátszóságra, eltűnésre helyeződik át a hangsúly. </p>
+      <p>A betűtípust a Google Fonts segítségével választottam ki. Ahol lehetet hivatkozást használtam, majd változtattam, hogy minden kép esetében alternatív szöveg jelenjen meg, ha a kép nem tud betölteni. Továbbá nehézséget okozott, hogy a navigációs rendszernél a füleknél vannak megegyező formázások, azonban különbözőek is (pl.: hover->color). Ezt a problémát, úgy oldottam meg, hogy többször kiírtam az azonos tulajdonságokat, amely talán nem a legelegánsabb megoldás, de működőképes. Összeségében sok időt töltöttem azzal, hogy megtaláljam a megfelelő technikát, amellyel el tudom érni a megálmodott megjelenést, így többször változtattam az elrendezéseken, például displayről gridre. Illetve sok módosítást igényelt a projekt amiatt, hogy a különböző keretek és elrendezések egymással milyen reakcióba kerültek. 
+      A projekt konzultációja után megváltoztattam a betűtípust egy vastagabb, jobban láthatóra. A menüsávban eredetileg "játékosan" a fülek másodszori kattintásal visszavezettek a kezdőoldalra és nem volt külön oda visszairányító fül. Azonban a gyakorlatvezető javaslatára az átláthatóság miatt, ezt megszüntettem és helyette plusz elem került a menüsávba (indító icon->portfolió első oldala).A legtöbb problémát a labor anyagok újbóli (és újbóli) megtekintésével, és a konzultációnak köszönhetően úgy érzem sikerült megoldani.
+      </p>
+    </div>
+
+    <div class="cim">FELHASZNÁLT FORRÁSOK</div>
+    <div class="forrasok">
+      <li><a href="https://www.youtube.com/watch?v=OjJJssbNy1M&feature=youtu.be">Informatika terméktervezőknek 7. hét BME-GPK-MOGI</li></a>
+      <li><a href="https://www.youtube.com/watch?v=R5-jLdMhn6g">Informatika terméktervezőknek 8. hét BME-GPK-MOGI</li></a>
+      <li><a href="https://www.youtube.com/watch?v=CYvt1uSx7wk">Informatika terméktervezőknek 9. hét BME-GPK-MOGI</li></a>
+      <li><a href="https://www.youtube.com/watch?v=QK9FfIB1t-o">Informatika terméktervezőknek 10. hét BME-GPK-MOGI</li></a>
+      <li><a href="https://collegeinfogeek.com/personal-website-examples/">50 of the Best Personal Website and Portfolio Examples in 2020</li></a>
+      <li><a href="https://www.w3schools.com/css/"> CSS Tutorial</li></a>
+      <li><a href="https://stackoverflow.com/questions/14263594/how-to-show-text-on-image-when-hovering">How to show text on image when hovering?</li></a>
+    </div>
+
+	 </main>
+
+<footer>
+    
+      <div id="footer_alja">
+          <span class="talalj">Találj Rám</span>
+          <div class="footer_iconok">
+            <a href="https://www.instagram.com/bogitala/" class="insta"><img src="kepek/instaa.png" alt="intagram_kep"></a>
+            <a href="https://www.facebook.com/boglarka.talaber" class="face"><img src="kepek/face.png" alt="facebook_icon"></a>
+            <a href="https://www.youtube.com/channel/UCfFrPwUIbyVWIvNNm0Z-6lg?view_as=subscriber" class="yuti"><img src="kepek/yuti.png" alt="youtube_icon"></a>
+           <a href="https://www.linkedin.com/in/bogl%C3%A1rka-talab%C3%A9r-b79381132/" class="linkedin"><img src="kepek/linked.png" alt="linkedin_kep"></a>
+          </div>
+      </div>
+   </footer>
+	
+
+</body>
+</html>
